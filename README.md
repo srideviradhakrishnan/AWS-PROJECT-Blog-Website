@@ -7,6 +7,6 @@
 </html>
 
 # STEP 1: Create The Base Networking Infrastructure For NAT/ELB, Webservers, Appservers and Database
- # A) Create The VPC Network
-    Name: Prod-VPC
-    CidirBlock: 10.0.0.0/16
+ ## A) Create The VPC Network
+   * Name: Prod-VPC
+   * CidirBlock: 10.0.0.0/16
