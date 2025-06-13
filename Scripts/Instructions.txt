@@ -1,0 +1,19 @@
+**Important**
+1.Make these files executable:
+		chmod +x scripts/*.sh
+
+
+2.Set appropriate IAM roles/policies to allow EC2 to:
+
+	Manage routes (setup-nat.sh)
+
+	Create RDS snapshots (rds-backup.sh)
+
+	Upload to S3 (sync-s3-cron.sh)
+
+3.Add to crontab for sync-s3-cron.sh:
+	crontab -e
+
+  Example every 12 hours:
+		0 */12 * * * /path/to/scripts/sync-s3-cron.sh >> /var/log/s3-sync.log 2>&1
+
